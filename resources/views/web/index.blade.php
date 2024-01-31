@@ -101,7 +101,7 @@
                             ?>
                             <div class="blog-image bg-1" style="{{ $estilo }}">
                                 <a href="#">
-                                    <img src="{{ asset('./amv/noticia_img/' . $noticia->imagen) }}" alt="image" />
+                                    <img src="{{ asset('./noticia_img/' . $noticia->imagen) }}" alt="image" />
                                 </a>
                                 <div class="tag">
                                     <a href="#">{{ $noticia->autor }}</a>

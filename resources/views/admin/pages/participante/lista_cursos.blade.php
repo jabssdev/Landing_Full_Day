@@ -69,7 +69,7 @@
                                     <td style="text-align: center">
                                         @if ($dato->curso->pdf != null)
                                             <div class="media-object">
-                                                <a href="{{ '/amv/pdf_img/' . $dato->curso->pdf }}" target="_blank"><img
+                                                <a href="{{ '/pdf_img/' . $dato->curso->pdf }}" target="_blank"><img
                                                         src="{{ asset('admin/assets/imagenes/pdf.png') }}" alt=""
                                                         width="30px"></a>
                                             </div>
@@ -80,7 +80,7 @@
                                     <td style="text-align: center">
                                         @if ($dato->curso->video != null)
                                             <div class="media-object">
-                                                <a href="{{ '/amv/video_img/' . $dato->curso->video }}"
+                                                <a href="{{ '/video_img/' . $dato->curso->video }}"
                                                     target="_blank"><img
                                                         src="{{ asset('admin/assets/imagenes/video.png') }}" alt=""
                                                         width="30px"></a>

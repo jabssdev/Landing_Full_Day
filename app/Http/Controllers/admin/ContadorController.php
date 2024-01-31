@@ -25,9 +25,7 @@ class ContadorController extends Controller
         
         try{
             $contador = new contador();
-            $contador->nombre=$request->nombre;
-            $contador->fecha=$request->fecha;
-            $contador->hora=$request->hora;
+            $contador->id_curso=$request->id_curso;
             $contador->estado='DESHABILITADO';
             $contador->save();
             return redirect()->route('contador.index');
@@ -46,9 +44,7 @@ class ContadorController extends Controller
     public function update(Request $request, $id){
         try{
             $contador=Contador::find($id);
-            $contador->nombre=$request->nombre;
-            $contador->fecha=$request->fecha;
-            $contador->hora=$request->hora;
+            $contador->id_curso = $request->id_curso;
             $contador->estado='DESHABILITADO';
             $contador->save();
             return redirect()->route('contador.index');

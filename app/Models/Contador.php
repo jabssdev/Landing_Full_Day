@@ -10,11 +10,13 @@ class Contador extends Model
     protected $table="contadores";
 
     protected $filliable=[
-        'nombre',
-        'fecha',
-        'hora',
+        
         'estado',
         'id_contador'
     ];
+    public function curso()
+    {
+        return $this->belongsTo(Curso::class, 'id_curso');
+    }
 
 }

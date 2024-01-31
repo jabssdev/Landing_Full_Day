@@ -43,6 +43,7 @@ class CursoController extends Controller
                 $file->move($path,$name);
                 $curso->video=$name;
             } 
+            // dd($curso);
             $curso->save();
             $contador = new Contador();
             $contador->nombre=$curso->nombre;
@@ -50,6 +51,7 @@ class CursoController extends Controller
             $contador->hora=$curso->hora;
             $contador->estado='DESHABILITADO';
             $contador->id_contador=$curso->id;
+            // dd($contador);
             $contador->save();
             return redirect()->route('curso.index');
         }
@@ -115,4 +117,9 @@ class CursoController extends Controller
             return response()->json(false);
         }
     }
+
+    public function obtener($id){
+        $curso = Curso::find($id);
+        return response()->json($curso);
+    }    
 }

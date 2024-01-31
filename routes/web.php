@@ -73,6 +73,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('curso/edit/{curso_id}', [CursoController::class,'edit'])->name('curso.edit');
         Route::put('curso/update/{curso_id}',[CursoController::class,'update'])->name('curso.update');
         Route::get('curso/delete/{curso_id}', [CursoController::class,'delete'])->name('curso.delete');
+        Route::get('obtener-curso/{id}', [CursoController::class, 'obtener'])->name('curso.obtener');
 
         /*=============================== Participante =========================================================*/
         

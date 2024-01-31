@@ -110,7 +110,7 @@
         $(document).on('click', '.button', function(e) {
             e.preventDefault();
             var id = $(this).data('id');
-            var link = "/amv/admin/participante/delete/";
+            var link = "/admin/participante/delete/";
             swal.fire({
                 title: "¿Estás seguro?",
                 text: "¡No podrás recuperar este registro!",
